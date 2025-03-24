@@ -24,6 +24,7 @@ class DatabaseSeeder extends Seeder
         ]);
         $this->call(DivisionSeeder::class);
         $this->call(UnitSeeder::class);
+        $this->call(RoleSeeder::class);
         $user = User::first();
         $user['unit_id'] = Unit::first()->id;
         $user->save();
